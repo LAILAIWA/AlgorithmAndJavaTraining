@@ -98,5 +98,4 @@ public class IndexMinPQ<T extends Comparable<T>> {
             k = j;
         }
     }
-
 }

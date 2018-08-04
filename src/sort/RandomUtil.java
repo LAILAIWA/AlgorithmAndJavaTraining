@@ -2,6 +2,9 @@ package sort;
 
 import java.util.Random;
 
+/**
+ * 随机数工具
+ */
 public class RandomUtil {
     public static Random random = new Random();
 

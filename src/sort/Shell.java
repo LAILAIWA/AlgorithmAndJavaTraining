@@ -4,6 +4,9 @@ import abstractClass.Stopwatch;
 
 import java.io.UnsupportedEncodingException;
 
+/**
+ * 希尔排序
+ */
 public class Shell extends SortExample {
     public static void sort(Comparable[] a){
         int N = a.length;

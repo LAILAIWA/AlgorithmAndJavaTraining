@@ -2,6 +2,9 @@ package sort;
 
 import abstractClass.Stopwatch;
 
+/**
+ * 堆排序，有问题
+ */
 public class Set extends SortExample {
     public static void sort(Comparable[] c){
         Comparable[] a = new Comparable[c.length+1];
