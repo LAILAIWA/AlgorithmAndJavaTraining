@@ -23,17 +23,16 @@ public class Shell extends SortExample {
     }
 
     public static void main(String[] args) throws UnsupportedEncodingException {
-        int data = 3;
-        String binaryStr = java.lang.Integer.toBinaryString(data);
-        System.out.println("the result is : " + binaryStr);
-        byte results[] = binaryStr.getBytes("utf8");
-        for(int i = 0;i < results.length ; i++){
-            System.out.println("the " + i +  " result is : " + results[i]);//"1"的ascii码是49。
+
+        double totalTime = 0;
+        for(int i = 0;i < 100;i++){
+            Integer[] a = RandomUtil.getRandomIndex(10000);
+            Stopwatch stopwatch = new Stopwatch();
+            sort(a);
+            //System.out.println(stopwatch.elapseTime());
+            //show(a);
+            totalTime+=stopwatch.elapseTime();
         }
-        Integer[] a = RandomUtil.getRandomIndex(10000);
-        Stopwatch stopwatch = new Stopwatch();
-        sort(a);
-        System.out.println(stopwatch.elapseTime());
-        show(a);
+        System.out.println("100次平均耗时：" + (totalTime/100));
     }
 }

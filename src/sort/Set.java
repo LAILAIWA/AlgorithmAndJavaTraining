@@ -3,21 +3,27 @@ package sort;
 import abstractClass.Stopwatch;
 
 /**
- * 堆排序，有问题
+ * 堆排序
  */
 public class Set extends SortExample {
-    public static void sort(Comparable[] c){
+    public static Comparable[] sort(Comparable[] c){
         Comparable[] a = new Comparable[c.length+1];
         int N = c.length;
         for (int i = 0;i < N;i++)
             a[i+1] = c[i];
+        //for循环构造堆，sink方法将a从1到N排序
         for(int k = N/2; k >= 1; k--)
             sink(a,k,N);
+        //show(a);
+        //while循环将最大元素a[1]和a[N]交换，并修复堆
         while (N > 1){
             exch(a,1,N--);
             sink(a,1,N);
+            //show(a);
         }
+        return a;
     }
+
     private static void swim(Comparable[] a,int k){
         while (k > 1 && less(k/2,k)){//循环判断条件，k>1,父结点的值比当前小
             //交换当前结点和父结点的值，以及当前游标所指下标
@@ -30,10 +36,10 @@ public class Set extends SortExample {
         while (2*k <= N){//循环判断条件，当前游标所指有子结点存在
             int j = 2*k;
             //当子结点不是最后结点，且子结点小于右子结点，指较大的那个子结点
-            if(j < N && less(j,j+1))
+            if(j < N && less(a[j],a[j+1]))
                 j++;
             //如果当前结点比子结点大就跳出循环
-            if(!less(k,j))
+            if(!less(a[k],a[j]))
                 break;
             //交换，更新游标
             exch(a,k,j);
@@ -48,9 +54,10 @@ public class Set extends SortExample {
     }
 
     public static void main(String[] args){
-        Integer[] a = RandomUtil.getRandomIndex(10000);
+        Comparable[] a = RandomUtil.getRandomIndex(100000);
+        //Comparable[] a = {'S','O','R','T','E','X','A','M','P','L','E'};
         Stopwatch stopwatch = new Stopwatch();
-        sort(a);
+        a = sort(a);
         System.out.println(stopwatch.elapseTime());
         show(a);
     }
