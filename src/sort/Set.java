@@ -54,11 +54,18 @@ public class Set extends SortExample {
     }
 
     public static void main(String[] args){
-        Comparable[] a = RandomUtil.getRandomIndex(100000);
+        double totalTime = 0;
+        for(int i = 0;i < 100;i++){
+            Comparable[] a = RandomUtil.getRandomIndex(10000);
+        //Comparable[] a = RandomUtil.getRandomIndex(100000);
         //Comparable[] a = {'S','O','R','T','E','X','A','M','P','L','E'};
-        Stopwatch stopwatch = new Stopwatch();
-        a = sort(a);
-        System.out.println(stopwatch.elapseTime());
-        show(a);
+            Stopwatch stopwatch = new Stopwatch();
+            //a = sort(a);
+            sort(a);
+            //System.out.println(stopwatch.elapseTime());
+            //show(a);
+            totalTime+=stopwatch.elapseTime();
+        }
+        System.out.println("100次平均耗时：" + (totalTime/100));
     }
 }

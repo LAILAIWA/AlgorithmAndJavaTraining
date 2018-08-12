@@ -45,10 +45,15 @@ public class Merge extends SortExample {
     }
 
     public static void main(String[] args){
-        Integer[] a = RandomUtil.getRandomIndex(10000);
-        Stopwatch stopwatch = new Stopwatch();
-        sort(a);
-        System.out.println(stopwatch.elapseTime());
-        show(a);
+        double totalTime = 0;
+        for(int i = 0;i < 100;i++){
+            Integer[] a = RandomUtil.getRandomIndex(10000);
+            Stopwatch stopwatch = new Stopwatch();
+            sort(a);
+            //System.out.println(stopwatch.elapseTime());
+            //show(a);
+            totalTime+=stopwatch.elapseTime();
+        }
+        System.out.println("100次平均耗时：" + (totalTime/100));
     }
 }
