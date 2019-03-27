@@ -63,7 +63,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Parent{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", sex='" + sex + '\'' +

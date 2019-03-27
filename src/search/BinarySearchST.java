@@ -141,7 +141,7 @@ public class BinarySearchST<Key extends Comparable<Key>,Value> {
 
     public static void main(String[] args){
         BinarySearchST<Integer,String> st = new BinarySearchST<>(6);
-        st.put(2,"a");
+        st.put(2,"Child");
         st.put(3,"b");
         st.put(4,"c");
         st.put(5,"d");

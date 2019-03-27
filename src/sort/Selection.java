@@ -24,7 +24,7 @@ public class Selection extends SortExample{
             Stopwatch stopwatch = new Stopwatch();
             sort(a);
             //System.out.println(stopwatch.elapseTime());
-            //show(a);
+            //show(Child);
             totalTime+=stopwatch.elapseTime();
         }
         System.out.println("100次平均耗时：" + (totalTime/100));

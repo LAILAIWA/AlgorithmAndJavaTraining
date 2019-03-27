@@ -7,34 +7,36 @@ import java.util.List;
 
 public class test {
     public static void main(String[] args){
-        Integer a = 0;
-        Float b = 0.0f;
-        String c = "original";
-        Student student = new Student("001","张三","男",18,60.0f);
+//        Integer Child = 0;
+//        Float b = 0.0f;
+//        String c = "original";
+//        Parent student = new Parent("001","张三","男",18,60.0f);
+//
+//        System.out.println("调用前: " + Child);
+//        System.out.println("调用前: " + b);
+//        System.out.println("调用前: " + c);
+//        System.out.println("调用前: " + student.toString());
+//
+//        change1(Child);
+//        change1(b);
+//        change1(c);
+//        change1(student);
+//
+//        System.out.println("第一次调用后: " + Child);
+//        System.out.println("第一次调用后: " + b);
+//        System.out.println("第一次调用后: " + c);
+//        System.out.println("第一次调用后: " + student.toString());
+//
+//        change2(Child);
+//        change2(b);
+//        change2(c);
+//        change2(student);
+//        System.out.println("第二次调用后: " + Child);
+//        System.out.println("第二次调用后: " + b);
+//        System.out.println("第二次调用后: " + c);
+//        System.out.println("第二次调用后: " + student.toString());
 
-        System.out.println("调用前: " + a);
-        System.out.println("调用前: " + b);
-        System.out.println("调用前: " + c);
-        System.out.println("调用前: " + student.toString());
 
-        change1(a);
-        change1(b);
-        change1(c);
-        change1(student);
-
-        System.out.println("第一次调用后: " + a);
-        System.out.println("第一次调用后: " + b);
-        System.out.println("第一次调用后: " + c);
-        System.out.println("第一次调用后: " + student.toString());
-
-        change2(a);
-        change2(b);
-        change2(c);
-        change2(student);
-        System.out.println("第二次调用后: " + a);
-        System.out.println("第二次调用后: " + b);
-        System.out.println("第二次调用后: " + c);
-        System.out.println("第二次调用后: " + student.toString());
     }
 
     private static void change1(Integer a){
@@ -74,5 +76,10 @@ public class test {
 
     private static void change2(Student student){
         student = new Student("003","小明","男",17,60.0f);
+    }
+
+    final class Point {
+        int x, y;
+        void move(int dx, int dy) { x += dx; y += dy; }
     }
 }
