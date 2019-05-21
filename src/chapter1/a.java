@@ -12,11 +12,11 @@ import java.util.Calendar;
 public class a {
     public static void main(String[] args){
 //        Date startDate = Date.valueOf("2018-9-3");
-//        Date date = Date.valueOf("2018-12-31");
+//        Date categories.java.a5date = Date.valueOf("2018-12-31");
 //        System.out.println("--getCurrentWeekNum--");
 //        System.out.println("--学期开始日期：" + startDate.toString());
 //        //获取当前日期
-//        System.out.println("--日期：" + date.toString());
+//        System.out.println("--日期：" + categories.java.a5date.toString());
 //
 //        //获取开始日期在一年中的周数
 //        Calendar cal1 = Calendar.getInstance();
@@ -28,7 +28,7 @@ public class a {
 //        //获取当前日期在一年中的周数
 //        Calendar cal2 = Calendar.getInstance();
 //        cal2.setFirstDayOfWeek(Calendar.MONDAY);
-//        cal2.setTime(date);
+//        cal2.setTime(categories.java.a5date);
 //        int num2 = cal2.get(Calendar.WEEK_OF_YEAR);
 //        int month = cal2.get(Calendar.MONTH);
 //        System.out.println("--当前日期所在周数：" + num2);

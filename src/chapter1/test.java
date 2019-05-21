@@ -1,9 +1,6 @@
 package chapter1;
 
-import abstractClass.Student;
-
-import java.sql.Date;
-import java.util.List;
+import categories.java.a1abstract.Student;
 
 public class test {
     public static void main(String[] args){
@@ -35,7 +32,6 @@ public class test {
 //        System.out.println("第二次调用后: " + b);
 //        System.out.println("第二次调用后: " + c);
 //        System.out.println("第二次调用后: " + student.toString());
-
 
     }
 
