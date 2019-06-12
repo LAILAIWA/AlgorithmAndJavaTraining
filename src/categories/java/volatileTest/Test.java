@@ -1,5 +1,7 @@
 package categories.java.volatileTest;
 
+import java.util.concurrent.LinkedTransferQueue;
+
 /**
  * @program: datastructure
  * @description:
@@ -7,6 +9,8 @@ package categories.java.volatileTest;
  * @create: 2019-01-09
  */
 public class Test {
+
+
     volatile int inc = 0;
 
     public void increase() {
