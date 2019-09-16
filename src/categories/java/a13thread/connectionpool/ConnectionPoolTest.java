@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * 模拟客户端ConnectionRunner获取、使用、最后释放连接的过程
+ */
 public class ConnectionPoolTest {
     static ConnectionPool pool = new ConnectionPool(10);
     //保证所有ConnectionRunner能够同时开始
