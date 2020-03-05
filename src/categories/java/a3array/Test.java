@@ -1,10 +1,15 @@
 package categories.java.a3array;
 
 import categories.java.a13thread.Person;
+import categories.java.a7defaultmethod.diamond.B;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListMap;
 
 /**
  * @program: datastructure
@@ -14,19 +19,19 @@ import java.util.*;
  */
 public class Test {
     public static void main(String[] args) {
-//        List<String> staff = new LinkedList<>();
-//        staff.add("张三");
-//        staff.add("李四");
-//        staff.add("王五");
-//        ListIterator<String> iterator = staff.listIterator();
-//        String first = iterator.next();
-//        System.out.println("first:" + first);
-//        String second = iterator.next();
-//        System.out.println("second:" + second);
-//        String pre1 = iterator.previous();
-//        System.out.println("pre1:" + pre1);
-//        iterator.remove();
-//        iterator.forEachRemaining(str -> System.out.println(str + " "));
+        List<String> staff = new LinkedList<>();
+        staff.add("张三");
+        staff.add("李四");
+        staff.add("王五");
+        ListIterator<String> iterator = staff.listIterator();
+        String first = iterator.next();
+        System.out.println("first:" + first);
+        String second = iterator.next();
+        System.out.println("second:" + second);
+        String pre1 = iterator.previous();
+        System.out.println("pre1:" + pre1);
+        iterator.remove();
+        iterator.forEachRemaining(str -> System.out.println(str + " "));
 
 //        SortedSet<Person> people = new TreeSet<>();
 //        people.add(new Person("Mary",17));
@@ -118,6 +123,245 @@ public class Test {
 //        for(int i = 0;i < result.length;i++){
 //            System.out.println(result[i]);
 //        }
+
+//        int n = 0;
+//        n = n - (n >>> 2);
+//        int rs = resizeStamp(64);
+//        System.out.println("resizeStamp " + rs);
+//        int sizeCtrl = (rs << 16) + 2;
+//        System.out.println("sizeCtrl = (rs << 16) + 2 " + sizeCtrl);
+//        System.out.println("sizeCtrl-1 " + (sizeCtrl-1));
+//        System.out.println("rs+1 " + (rs+1));
+//        System.out.println("resizeStamp " + rs);
+
+        List<BigDecimal> counter = new ArrayList<>();
+        counter.add(new BigDecimal(6.0 * 64.0));
+        counter.add(new BigDecimal(3.0 * 73.0));
+        counter.add(new BigDecimal(0.5 * 79.0));
+        counter.add(new BigDecimal(1.5 * 76.0));
+        counter.add(new BigDecimal(2.0 * 73.0));
+        counter.add(new BigDecimal(2.0 * 75.0));
+        counter.add(new BigDecimal(2.0 * 78.0));
+        counter.add(new BigDecimal(1.0 * 65.0));
+        counter.add(new BigDecimal(3.0 * 93.0));
+        counter.add(new BigDecimal(2.5 * 87.0));
+        counter.add(new BigDecimal(2.0 * 92.8));
+        counter.add(new BigDecimal(1.0 * 76.0));
+        counter.add(new BigDecimal(1.0 * 86.0));
+        counter.add(new BigDecimal(2.0 * 90.0));
+        counter.add(new BigDecimal(1.0 * 71.0));
+        counter.add(new BigDecimal(1.0 * 87.0));
+        counter.add(new BigDecimal(1.0 * 80.0));
+        counter.add(new BigDecimal(4.0 * 70.0));
+        counter.add(new BigDecimal(5.0 * 85.0));
+        counter.add(new BigDecimal(1.5 * 76.0));
+        counter.add(new BigDecimal(2.0 * 80.0));
+        counter.add(new BigDecimal(1.0 * 87.0));
+        counter.add(new BigDecimal(1.0 * 62.0));
+        counter.add(new BigDecimal(3.0 * 74.0));
+        counter.add(new BigDecimal(2.0 * 91.0));
+        counter.add(new BigDecimal(1.0 * 96.0));
+        counter.add(new BigDecimal(4.0 * 60.0));
+        counter.add(new BigDecimal(3.0 * 77.0));
+        counter.add(new BigDecimal(3.0 * 74.0));
+        counter.add(new BigDecimal(0.5 * 80.0));
+        counter.add(new BigDecimal(1.5 * 76.0));
+        counter.add(new BigDecimal(2.0 * 80.0));
+        counter.add(new BigDecimal(1.0 * 90.0));
+        counter.add(new BigDecimal(1.0 * 82.0));
+        counter.add(new BigDecimal(2.0 * 80.0));
+        counter.add(new BigDecimal(3.5 * 65.0));
+        counter.add(new BigDecimal(4.0 * 76.0));
+
+        counter.add(new BigDecimal(1.0 * 94.0));
+        counter.add(new BigDecimal(4.0 * 75.0));
+//        counter.add(new BigDecimal(2.0 * P));
+//        counter.add(new BigDecimal(2.0 * P));
+        counter.add(new BigDecimal(1.0 * 95.0));
+        counter.add(new BigDecimal(3.0 * 78.0));
+        counter.add(new BigDecimal(1.5 * 84.0));
+        counter.add(new BigDecimal(2.0 * 80.0));
+        counter.add(new BigDecimal(1.0 * 81.0));
+        counter.add(new BigDecimal(3.5 * 84.0));
+        counter.add(new BigDecimal(3.5 * 60.0));
+        counter.add(new BigDecimal(2.0 * 94.0));
+        counter.add(new BigDecimal(3.0 * 95.0));
+        counter.add(new BigDecimal(2.0 * 84.0));
+        counter.add(new BigDecimal(1.0 * 82.0));
+        counter.add(new BigDecimal(2.0 * 96.0));
+        counter.add(new BigDecimal(2.0 * 75.0));
+        counter.add(new BigDecimal(2.5 * 90.0));
+        counter.add(new BigDecimal(1.0 * 84.0));
+        counter.add(new BigDecimal(1.0 * 90.0));
+        counter.add(new BigDecimal(0.5 * 80.0));
+        counter.add(new BigDecimal(3.0 * 72.0));
+        counter.add(new BigDecimal(1.0 * 85.0));
+        counter.add(new BigDecimal(1.0 * 72.0));
+        counter.add(new BigDecimal(4.0 * 73.0));
+        counter.add(new BigDecimal(3.5 * 80.0));
+        counter.add(new BigDecimal(2.5 * 88.0));
+        counter.add(new BigDecimal(2.5 * 70.0));
+        counter.add(new BigDecimal(1.0 * 88.0));
+        counter.add(new BigDecimal(3.0 * 76.0));
+        counter.add(new BigDecimal(1.0 * 86.0));
+        counter.add(new BigDecimal(3.0 * 82.0));
+        counter.add(new BigDecimal(1.0 * 85.0));
+        counter.add(new BigDecimal(2.0 * 74.0));
+        counter.add(new BigDecimal(1.0 * 84.0));
+        counter.add(new BigDecimal(1.0 * 81.0));
+
+        counter.add(new BigDecimal(1.0 * 92.0));
+//        counter.add(new BigDecimal(0.5 * P));
+        counter.add(new BigDecimal(2.0 * 70.0));
+        counter.add(new BigDecimal(0.5 * 82.0));
+        counter.add(new BigDecimal(2.5 * 82.0));
+        counter.add(new BigDecimal(3.0 * 85.0));
+//        counter.add(new BigDecimal(2.0 * P));
+        counter.add(new BigDecimal(7.0 * 89.0));
+        counter.add(new BigDecimal(0.5 * 95.0));
+
+        List<BigDecimal> counter1 = new ArrayList<>();
+        counter1.add(new BigDecimal(6.0));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(0.5));
+        counter1.add(new BigDecimal(1.5));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(2.5));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(4.0));
+        counter1.add(new BigDecimal(5.0));
+        counter1.add(new BigDecimal(1.5));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(4.0));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(0.5));
+        counter1.add(new BigDecimal(1.5));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(3.5));
+        counter1.add(new BigDecimal(4.0));
+
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(4.0));
+//        counter1.add(new BigDecimal(2.0P));
+//        counter1.add(new BigDecimal(2.0P));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(1.5));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(3.5));
+        counter1.add(new BigDecimal(3.5));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(2.5));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(0.5));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(4.0));
+        counter1.add(new BigDecimal(3.5));
+        counter1.add(new BigDecimal(2.5));
+        counter1.add(new BigDecimal(2.5));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(3.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(1.0));
+        counter1.add(new BigDecimal(1.0));
+
+        counter1.add(new BigDecimal(1.0));
+//        counter1.add(new BigDecimal(0.5P));
+        counter1.add(new BigDecimal(2.0));
+        counter1.add(new BigDecimal(0.5));
+        counter1.add(new BigDecimal(2.5));
+        counter1.add(new BigDecimal(3.0));
+//        counter1.add(new BigDecimal(2.0P));
+        counter1.add(new BigDecimal(7.0));
+        counter1.add(new BigDecimal(0.5));
+
+        BigDecimal a = new BigDecimal(0);
+        for(BigDecimal b : counter){
+            a = a.add(b);
+        }
+        System.out.println("counter = " + counter.size());
+        System.out.println("counter1 = " + counter1.size());
+        System.out.println("a = " + a);
+        BigDecimal c = new BigDecimal(0);
+        for(BigDecimal b : counter1){
+            c = c.add(b);
+        }
+        System.out.println("c = " + c);
+
+        System.out.println("a / c = " + a.divide(c,10, RoundingMode.HALF_UP));
+//
+//        System.out.println("1 << (RESIZE_STAMP_BITS - 1) " + Integer.toBinaryString(1 << (16 - 1)));
+//        System.out.println(" " + (31 | 1 << (16 - 1)) );
+//        for(int i = -2;i < 64;i++){
+//            System.out.println(i + " : "  + numberOfLeadingZeros(i));
+//        }
+//        System.out.println("1 "  + Integer.toBinaryString(1));
+//        System.out.println("-1 "  + Integer.toBinaryString(-1));
+//        System.out.println("64 "  + Integer.toBinaryString(64));
+//        System.out.println("-64 "  + Integer.toBinaryString(-64));
+//        List<String> a1 = new ArrayList<>(1);
+//        System.out.println("a1 : " + a1.getClass().getName() + "@" + Integer.toHexString(a1.hashCode()));
+//        a1.add("a");
+//        System.out.println("a1 : " + a1.getClass().getName() + "@" + Integer.toHexString(a1.hashCode()));
+//        a1.add("b");
+//        System.out.println("a1 : " + a1.getClass().getName() + "@" + Integer.toHexString(a1.hashCode()));
+//        a1.add("c");
+//        System.out.println("a1 : " + a1.getClass().getName() + "@" + Integer.toHexString(a1.hashCode()));
+//        a1.add("d");
+//        System.out.println("a1 : " + a1.getClass().getName() + "@" + Integer.toHexString(a1.hashCode()));
+//
+//        List<String> list = new ArrayList<>();
+//        list.add("a");
+//        list.add("b");
+//        list.add("c");
+//        list.add("b");
+//        //普通for循环
+//        for(int i = 0;i < list.size();i++) {
+//            String s = list.get(i);
+//            if("b".equals(s)) {
+//                list.remove(s);
+//            }
+//        }
+//
+//        System.out.println(list);
+//        list.add("b");
+//        //for-each
+//        for(String s : list) {
+//            if(s.equals("b")) {
+//                list.remove(s);
+//            }
+//        }
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -148,5 +392,27 @@ public class Test {
 
     public static void print(EnumSet set){
         set.forEach(v -> System.out.println("value[" + v + "]"));
+    }
+
+    static final int resizeStamp(int n) {
+        return Integer.numberOfLeadingZeros(n) | (1 << (16 - 1));
+    }
+
+    public static int numberOfLeadingZeros(int i) {
+        // HD, Figure 5-6
+        if (i == 0)
+            return 32;
+        int n = 1;
+        //高16位为0，n为17，i左移16位
+        if (i >>> 16 == 0) { n += 16; i <<= 16; }
+        //高8位为0，n为9，i左移8位
+        if (i >>> 24 == 0) { n +=  8; i <<=  8; }
+        //高4位为0，n为5，i左移4位
+        if (i >>> 28 == 0) { n +=  4; i <<=  4; }
+        //高2位为0，n为3，i左移2位
+        if (i >>> 30 == 0) { n +=  2; i <<=  2; }
+        System.out.println("此时n " + n + " i " + i + " "+ Integer.toBinaryString(i));
+        n -= i >>> 31;
+        return n;
     }
 }
