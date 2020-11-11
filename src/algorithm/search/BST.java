@@ -5,7 +5,7 @@ import java.base.a1abstract.MyQueue;
 /**
  * @program: datastructure
  * @description: 基于二叉查找树的符号表
- * @author: 来建培
+ * @author: enix
  * @create: 2018-09-01
  */
 public class BST<Key extends Comparable<Key>, Value> {

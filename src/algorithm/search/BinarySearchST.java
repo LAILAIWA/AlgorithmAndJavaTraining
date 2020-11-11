@@ -5,7 +5,7 @@ import java.base.a1abstract.MyQueue;
 /**
  * @program: datastructure
  * @description: 二分查找-基于有序数组
- * @author: 来建培
+ * @author: enix
  * @create: 2018-08-13
  */
 public class BinarySearchST<Key extends Comparable<Key>,Value> {
