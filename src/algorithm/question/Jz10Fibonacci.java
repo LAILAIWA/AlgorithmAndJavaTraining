@@ -1,8 +1,5 @@
 package algorithm.question;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * 斐波那契数列
  *
@@ -32,7 +29,6 @@ import java.util.Map;
  * 0 <= n <= 100
  * Related Topics
  * 递归
- *
  */
 public class Jz10Fibonacci {
     public static void main(String[] args) {
@@ -56,7 +52,7 @@ public class Jz10Fibonacci {
 //        return fib(n - 1) + fib(n - 2);
         //Time Limit Exceeded
         int fn2 = 1, fn1 = 0, res = fn1;
-        for (int i = 0; i < n; i ++) {
+        for (int i = 0; i < n; i++) {
             res = fn1 + fn2;
             if (res >= 1000000007) {
                 res -= 1000000007;

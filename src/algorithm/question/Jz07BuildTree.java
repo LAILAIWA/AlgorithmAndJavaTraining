@@ -11,36 +11,36 @@ import java.util.Map;
 public class Jz07BuildTree {
     /**
      * 输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
-     *
-     *
-     *
+     * <p>
+     * <p>
+     * <p>
      * 例如，给出
-     *
+     * <p>
      * 前序遍历 preorder = [3,9,20,15,7] 父 -> 左 -> 右
      * 中序遍历 inorder = [9,3,15,20,7] 左 -> 父 -> 右
      * 返回如下的二叉树：
-     *
-     *     3
-     *    / \
-     *   9  20
-     *     /  \
-     *    15   7
-     *
-     *
+     * <p>
+     * 3
+     * / \
+     * 9  20
+     * /  \
+     * 15   7
+     * <p>
+     * <p>
      * 限制：
-     *
+     * <p>
      * 0 <= 节点个数 <= 5000
-     *
-     *
-     *
+     * <p>
+     * <p>
+     * <p>
      * 注意：本题与主站 105 题重复：https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
-     *
+     * <p>
      * Related Topics
      * 树
      * 递归
      */
     public static TreeNode buildTree(int[] preorder, int[] inorder) {
-        if(preorder.length == 0 || inorder.length == 0) {
+        if (preorder.length == 0 || inorder.length == 0) {
             return null;
         }
         // 遍历获取每个元素在中序遍历的位置
@@ -55,16 +55,16 @@ public class Jz07BuildTree {
 
     /**
      * 递归运算
-     *
+     * <p>
      * 时间复杂度：O(n)。对于每个节点都有创建过程以及根据左右子树重建过程。
      * 空间复杂度：O(n)。存储整棵树的开销。
      *
-     * @param preorder 前序遍历数组
+     * @param preorder      前序遍历数组
      * @param preorderStart 前序遍历开始下标
-     * @param preorderEnd 前序遍历结束下标
-     * @param inorderStart 中序遍历开始下标
-     * @param inorderEnd 中序遍历结束下标
-     * @param indexMap 中序遍历坐标
+     * @param preorderEnd   前序遍历结束下标
+     * @param inorderStart  中序遍历开始下标
+     * @param inorderEnd    中序遍历结束下标
+     * @param indexMap      中序遍历坐标
      * @return 二叉树
      */
     public static TreeNode buildTree(int[] preorder,
@@ -102,9 +102,9 @@ public class Jz07BuildTree {
         }
     }
 
-    public static void main(String[] args){
-        int[] preorder = {3,9,20,15,7};
-        int[] inorder = {9,3,15,20,7};
+    public static void main(String[] args) {
+        int[] preorder = {3, 9, 20, 15, 7};
+        int[] inorder = {9, 3, 15, 20, 7};
         TreeNode node = buildTree(preorder, inorder);
         printFromTopToBottom(node);
     }
@@ -112,9 +112,9 @@ public class Jz07BuildTree {
     /**
      * 按每行打印二叉树
      */
-    public static void printFromTopToBottom(TreeNode root){
-        if(root==null){
-            return ;
+    public static void printFromTopToBottom(TreeNode root) {
+        if (root == null) {
+            return;
         }
         int depth = depth(root);
         for (int i = 1; i <= depth; ++i) {
@@ -125,30 +125,30 @@ public class Jz07BuildTree {
     /**
      * 层序遍历二叉树递归实现
      */
-    private static int depth(TreeNode root){
-        if(root==null){
+    private static int depth(TreeNode root) {
+        if (root == null) {
             return 0;
         }
         int l = depth(root.left);
         int r = depth(root.right);
-        if(l > r){
+        if (l > r) {
             return l + 1;
-        }else{
+        } else {
             return r + 1;
         }
     }
 
     private static void levelOrder(TreeNode node, int level) {
-        if(node == null || level < 1){
-            return ;
+        if (node == null || level < 1) {
+            return;
         }
-        if(level == 1){
+        if (level == 1) {
             System.out.print(node.val + " ");
-            return ;
+            return;
         }
         // 左子树
-        levelOrder(node.left, level-1);
+        levelOrder(node.left, level - 1);
         // 右子树
-        levelOrder(node.right, level-1);
+        levelOrder(node.right, level - 1);
     }
 }
