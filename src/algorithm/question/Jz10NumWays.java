@@ -24,12 +24,6 @@ package algorithm.question;
  * 0 <= n <= 100
  */
 public class Jz10NumWays {
-    //1: 1
-    //2: 11 2
-    //3: 111 12 21
-    //4: 1111 121 211 112
-    //5: 11111 1211 2111 1121 122 212 221
-    // f(n) = f(n-1) + f()
     public static void main(String[] args) {
         System.out.println(numWays(1));
         System.out.println(numWays(2));
@@ -38,6 +32,10 @@ public class Jz10NumWays {
         System.out.println(numWays(48));
     }
 
+    /**
+     * 时间复杂度：o(N)
+     * 空间复杂度：o(1)
+     */
     public static int numWays(int n) {
         int fn2 = 0, fn1 = 1, res = fn1;
         for (int i = 0; i < n; i ++) {

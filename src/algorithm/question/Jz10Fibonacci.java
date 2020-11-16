@@ -43,7 +43,7 @@ public class Jz10Fibonacci {
 
     /**
      * 时间复杂度：o(N)
-     * 空间复杂度：o(1))
+     * 空间复杂度：o(1)
      */
     public static int fib(int n) {
 //        if (n == 0) {
