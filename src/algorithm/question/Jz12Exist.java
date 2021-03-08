@@ -32,8 +32,6 @@ package algorithm.question;
  * Related Topics
  * 深度优先搜索
  *
- * @author enix
- * @date 2020/11/17
  */
 public class Jz12Exist {
 
