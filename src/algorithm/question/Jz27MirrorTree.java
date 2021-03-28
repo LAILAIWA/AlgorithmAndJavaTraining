@@ -1,11 +1,9 @@
 package algorithm.question;
 
-import algorithm.question.used.ListNode;
 import algorithm.question.used.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
-import java.util.Stack;
 
 /**
  * 二叉树的镜像
