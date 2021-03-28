@@ -2,8 +2,6 @@ package algorithm.question;
 
 import algorithm.question.used.TreeNode;
 
-import java.util.Stack;
-
 /**
  * 树的子结构
  *
