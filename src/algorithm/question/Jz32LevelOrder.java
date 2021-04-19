@@ -1,7 +1,6 @@
 package algorithm.question;
 
 import algorithm.question.used.TreeNode;
-import edu.princeton.cs.algs4.In;
 
 import java.util.ArrayList;
 import java.util.Deque;
