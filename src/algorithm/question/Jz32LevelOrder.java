@@ -2,7 +2,6 @@ package algorithm.question;
 
 import algorithm.question.used.TreeNode;
 
-import java.base.a7defaultmethod.diamond.A;
 import java.util.ArrayList;
 import java.util.List;
 
