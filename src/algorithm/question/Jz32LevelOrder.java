@@ -4,6 +4,7 @@ import algorithm.question.used.TreeNode;
 
 import java.base.a7defaultmethod.diamond.A;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 从上到下打印二叉树
@@ -43,40 +44,76 @@ public class Jz32LevelOrder {
         node1.right = node3;
         node3.left = node4;
         node3.right = node5;
-        int[] result = levelOrder(node1);
-        for (int i : result) {
-            System.out.print(i + ",");
-        }
+//        int[] result = levelOrder(node1);
+//        for (int i : result) {
+//            System.out.print(i + ",");
+//        }
+        List<List<Integer>> result = levelOrder(node1);
+        System.out.println(result);
     }
 
-    public static int[] levelOrder(TreeNode root) {
+//    public static int[] levelOrder(TreeNode root) {
+//        if (root == null) {
+//            return new ArrayList<>();
+//        }
+//        // 广度优先搜索
+//        ArrayList<Integer> list = new ArrayList<>();
+//        int count = 0;
+//        ArrayList<TreeNode> childRoots = new ArrayList<>();
+//        childRoots.add(root);
+//        count = bfs(childRoots, list, count);
+//        int[] result = new int[count];
+//        for (int i = 0; i < count ; i++) {
+//            result[i] = list.get(i);
+//        }
+//        return result;
+//    }
+//
+//    /**
+//     * 广度优先搜索-递归
+//     */
+//    public static int bfs(ArrayList<TreeNode> roots, ArrayList<Integer> list, int count){
+//        if(roots == null || roots.size() == 0) {
+//            return count;
+//        }
+//        ArrayList<TreeNode> childRoots = new ArrayList<>();
+//        for(TreeNode temp : roots){
+//            list.add(temp.val);
+//            count++;
+//            // 如果有左子树，将左子树根节点放入集合中
+//            if(temp.left != null ) {
+//                childRoots.add(temp.left);
+//            }
+//            // 如过有右子树，将右子树根节点放入集合中
+//            if(temp.right != null) {
+//                childRoots.add(temp.right);
+//            }
+//        }
+//        // 向下递归
+//        return bfs(childRoots, list, count);
+//    }
+
+    // 每一层打印到一行。
+    public static List<List<Integer>> levelOrder(TreeNode root) {
         if (root == null) {
-            return null;
+            return new ArrayList<>();
         }
         // 广度优先搜索
-        ArrayList<Integer> list = new ArrayList<>();
-        int count = 0;
+        List<List<Integer>> list = new ArrayList<>();
         ArrayList<TreeNode> childRoots = new ArrayList<>();
         childRoots.add(root);
-        count = bfs(childRoots, list, count);
-        int[] result = new int[count];
-        for (int i = 0; i < count ; i++) {
-            result[i] = list.get(i);
-        }
-        return result;
+        bfs(childRoots, list);
+        return list;
     }
 
-    /**
-     * 广度优先搜索-递归
-     */
-    public static int bfs(ArrayList<TreeNode> roots, ArrayList<Integer> list, int count){
+    public static void bfs(ArrayList<TreeNode> roots, List<List<Integer>> list){
         if(roots == null || roots.size() == 0) {
-            return count;
+            return;
         }
         ArrayList<TreeNode> childRoots = new ArrayList<>();
+        List<Integer> newList = new ArrayList<>();
         for(TreeNode temp : roots){
-            list.add(temp.val);
-            count++;
+            newList.add(temp.val);
             // 如果有左子树，将左子树根节点放入集合中
             if(temp.left != null ) {
                 childRoots.add(temp.left);
@@ -86,8 +123,9 @@ public class Jz32LevelOrder {
                 childRoots.add(temp.right);
             }
         }
+        list.add(newList);
         // 向下递归
-        return bfs(childRoots, list, count);
+        bfs(childRoots, list);
     }
 
 }
